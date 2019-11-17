@@ -1,8 +1,6 @@
 <template>
   <div id="app">
-    <div v-if="!isAuthorized">
-      <Chat/>
-    </div>
+    <Chat/>
   </div>
 </template>
 
@@ -15,9 +13,7 @@ export default {
     Chat
   },
   data: function () {
-    return  {
-      isAuthorized: false
-    }
+    return  {}
   }
 }
 </script>
