@@ -1,4 +1,5 @@
 import RandomValues from "../classes/RandomValues";
+import TextTimer from "../classes/TextTimer";
 import Store from "../store/Store";
 
 export default {
@@ -77,21 +78,22 @@ export default {
                     break;
                 }
 
-                toHistoryWithArgs(':' + Store.state.chatServer + ' 704 ' + Store.state.nick + ' index ', ':Help topics available to users:', delay);
-                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':', 10);
-                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':ACCEPT          ADMIN           AWAY            CHALLENGE', 10);
-                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':CMODE           CNOTICE         CPRIVMSG        CREDITS', 10);
-                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':ERROR           EXTBAN          HELP            INDEX', 10);
-                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':INFO            INVITE          ISON            JOIN', 10);
-                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':KICK            KNOCK           LINKS           LIST', 10);
-                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':LUSERS          MAP             MOTD            NAMES', 10);
-                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':NICK            NOTICE          OPER            PART', 10);
-                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':PASS            PING            PONG            PRIVMSG', 10);
-                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':QUIT            STATS           TIME            TOPIC', 10);
-                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':TRACE           UMODE           USER            USERHOST', 10);
-                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':USERS           VERSION         WHO             WHOIS', 10);
-                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':WHOWAS', 10);
-                toHistoryWithArgs(':' + Store.state.chatServer + ' 706 ' + Store.state.nick + ' index ', ':End of /HELP', 10);
+                TextTimer.additiveDelay(0, true);
+                toHistoryWithArgs(':' + Store.state.chatServer + ' 704 ' + Store.state.nick + ' index ', ':Help topics available to users:', TextTimer.additiveDelay(250));
+                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':', TextTimer.additiveDelay(10));
+                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':ACCEPT          ADMIN           AWAY            CHALLENGE', TextTimer.additiveDelay(10));
+                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':CMODE           CNOTICE         CPRIVMSG        CREDITS', TextTimer.additiveDelay(10));
+                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':ERROR           EXTBAN          HELP            INDEX', TextTimer.additiveDelay(10));
+                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':INFO            INVITE          ISON            JOIN', TextTimer.additiveDelay(10));
+                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':KICK            KNOCK           LINKS           LIST', TextTimer.additiveDelay(10));
+                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':LUSERS          MAP             MOTD            NAMES', TextTimer.additiveDelay(10));
+                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':NICK            NOTICE          OPER            PART', TextTimer.additiveDelay(10));
+                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':PASS            PING            PONG            PRIVMSG', TextTimer.additiveDelay(10));
+                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':QUIT            STATS           TIME            TOPIC', TextTimer.additiveDelay(10));
+                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':TRACE           UMODE           USER            USERHOST', TextTimer.additiveDelay(10));
+                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':USERS           VERSION         WHO             WHOIS', TextTimer.additiveDelay(10));
+                toHistoryWithArgs(':' + Store.state.chatServer + ' 705 ' + Store.state.nick + ' index ', ':WHOWAS', TextTimer.additiveDelay(10));
+                toHistoryWithArgs(':' + Store.state.chatServer + ' 706 ' + Store.state.nick + ' index ', ':End of /HELP', TextTimer.additiveDelay(10));
 
                 break;
         }

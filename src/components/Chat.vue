@@ -12,7 +12,7 @@
 
         <!-- USER INPUT PROMPT -->
         <div class="line">
-            {{ promptPrefix }}<input id="prompt" v-on:keypress.enter="toHistory" v-on:input="changeSize" v-model="userInput" v-bind:size="inputSize" autofocus/>
+            {{ promptPrefix }}<input class="prompt" id="prompt" v-on:keypress.enter="toHistory" v-on:input="changeSize" v-model="userInput" v-bind:size="inputSize" autofocus/>
             <span class="blinking-cursor">{{ blinkingCursor }}</span>
         </div>
         <br>
@@ -180,8 +180,8 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-    input {
-        margin-right: -15px;
+    .prompt {
+        margin-right: -.75em;
         border: none;
         background-color: inherit;
         color: transparent;
@@ -211,6 +211,7 @@
     .blinking-cursor {
         font-weight: 100;
         font-size: inherit;
+        font-family: inherit;
         color: rgb(187,187,187);
         -webkit-animation: 1s blink step-end infinite;
         -moz-animation: 1s blink step-end infinite;
